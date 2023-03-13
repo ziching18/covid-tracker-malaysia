@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--?php include 'data.php';?-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script>
+            var states = new Array();
+            states = [
+                ['Johor',[2,3,4,5,2,3,4,2,3,2,2,2,3,3]],
+                ['Kedah',],
+                ['Kelantan',],
+                ['Melaka',],
+                ['Negeri Sembilan',],
+                ['Pahang',],
+                ['Perak',],
+                ['Perlis',],
+                ['Penang',],
+                ['Sabah',],
+                ['Sarawak',],
+                ['Selangor',],
+                ['Terengganu',],
+                ['W.P. Kuala Lumpur',],
+                ['W.P. Labuan',],
+                ['W.P. Putrajaya',]
+            ]
+
+            function drawChart(xvalue) {
+                var yvalues = [2,3,4,5,2,3,4,2,3,2,2,2,3,3];
+
+                new Chart(
+                    'stateCase', {
+                        type:'line',
+                        data: {
+                            labels: xvalue,
+                            datasets: [{
+                                fill:false,
+                                lineTension:0,
+                                backgroundColor:'#ededed',
+                                borderColor:'#ededed',
+                                data:yvalues
+                            }]
+                        },
+                        options: {
+                            legend: {display:false},
+                            scales: {
+                                yAxes: [{ticks: {min:0, max:16}}],
+                            }
+                        }
+                });
+            }
+
+            function selectState(click_id) {
+                var xvalue = states[click_id][1];
+                drawChart(xvalue);
+                console.log(click_id);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="selection">
+            <button id="perlis" onclick="selectState(this.value)" type="submit" value="7">Perlis</button>
+            <button id="kedah" onclick="selectState(this.value)" type="button" value="1">Kedah</button>
+            <button id="penang" onclick="selectState(this.value)" type="button" value="8">Penang</button>
+            <button id="perak" onclick="selectState(this.value)" type="button" value="6">Perak</button>
+            <button id="kelantan" onclick="selectState(this.value)" type="button" value="2">Kelantan</button>
+            <button id="terengganu" onclick="selectState(this.value)" type="button" value="12">Terengganu</button>
+            <button id="selangor" onclick="selectState(this.value)" type="button" value="11">Selangor</button>
+            <button id="kl" onclick="selectState(this.value)" type="button" value="13">W.P. Kuala Lumpur</button>
+            <button id="pahang" onclick="selectState(this.value)" type="button" value="5">Pahang</button>
+            <button id="nsembilan" onclick="selectState(this.value)" type="button" value="4">Negeri Sembilan</button>
+            <button id="melaka" onclick="selectState(this.value)" type="button" value="3">Melaka</button>
+            <button id="johor" onclick="selectState(this.value)" type="button" value="0">Johor</button>
+            <button id="sarawak" onclick="selectState(this.value)" type="button" value="10">Sarawak</button>
+            <button id="labuan" onclick="selectState(this.value)" type="button" value="14">W.P. Labuan</button>
+            <button id="sabah" onclick="selectState(this.value)" type="button" value="9">Sabah</button>
+            <button id="putrajaya" onclick="selectState(this.value)" type="button" value="15">W.P. Putrajaya</button>
+        </div>
+        <div id="stateCase">chart here</div>
+    </body>
+</html>

@@ -1,0 +1,226 @@
+body {
+    background-color:#ededed;
+    font-family:'Poppins', sans-serif;
+}
+
+div.header {
+    font-style:normal;
+    font-size:26px;
+    padding:0.5px;
+    margin-bottom:5px;
+    margin-top:0%;
+    /*background-color:#5b6e85; blue*/
+    background-color:#3a3a3a;
+    padding-left:2%;
+    border-radius:10px;
+    color:white;
+}
+
+div.selection {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding:2px;
+    margin-bottom:5px;
+    background-color:#cadaeb;
+    padding-left:auto;
+    padding-right:auto;
+    border-radius:10px;
+    color:white;
+    text-align:center;
+}
+
+div.footer {
+    font-style:normal;
+    font-family:'Poppins Light', sans-serif;
+    font-size:15px;
+    padding:0.5px;
+    margin-bottom:5px;
+    /*background-color:#cadaeb; light blue*/
+    background-color:#3a3a3a;
+    padding-left:2%;
+    border-radius:10px;
+    color:white;
+}
+/*#header {
+    background-color:#cadaeb;
+    padding:5%;
+    text-align:center;
+}*/
+#date {
+    float:right;
+    padding-right:2%;
+    margin-top:1%;
+    font-style:normal;
+    font-size:15px;
+    font-family:'Inter Light', sans-serif;
+}
+#date:hover {
+    color:blanchedalmond;
+    text-decoration:none;
+}
+
+#title:hover, #title:visited {
+    text-decoration:none;
+    color:white;
+}
+
+.nav {
+    font-size:18px;
+    padding: 30px 40px;
+    margin:none;
+    text-align:center;
+}
+
+.nav:hover {
+    text-decoration:none;
+    /*background-color:#4e4e4e;
+    border-radius:10px;*/
+}
+
+div.map {
+    background-color:#ededed;
+    width:100%;
+    height:30%;
+    display:table;
+    padding-top:0%;
+    color:#ededed;
+    border-radius:10px;
+    padding:0px;
+    object-fit:cover;
+    margin-bottom:5px;
+}
+
+div.map #regions_div {
+    width:100%;
+    height:490px;
+    size:100%;
+    vertical-align:middle;
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
+}
+
+div.map #regions_div:hover {
+    cursor:normal;
+}
+div.map #text {
+    width:10%;
+    display:inline;
+    align-content:center;
+    font-weight:bold;
+}
+
+div.info-header {
+    text-align:center;
+    font-size:25px;
+    padding:0%;
+}
+
+div.info-pannel {
+    padding:5px;
+}
+
+td {
+    border-radius:10px;
+    color:black;
+}
+
+button {
+    background-color:d8d8d8;
+    border:none;
+    font-family:'Poppins', sans-serif;
+    padding:4.4px;
+    margin:4px;
+    margin-left:0px;
+    margin-right:0px;
+    font-size:12px;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+button#perlis:hover  {
+    background-color:#ea4f5e;
+    font-weight:bold;
+}
+
+button#kedah:hover  {
+    background-color:#ed6c59;
+    font-weight:bold;
+}
+
+button#penang:hover  {
+    background-color:#f08953;
+    font-weight:bold;
+}
+
+button#perak:hover  {
+    background-color:#f3a54e;
+    font-weight:bold;
+}
+
+button#kelantan:hover  {
+    background-color:#f6c248;
+    font-weight:bold;
+}
+
+button#terengganu:hover  {
+    background-color:#c9cb64;
+    font-weight:bold;
+}
+
+button#selangor:hover  {
+    background-color:#9bd580;
+    font-weight:bold;
+}
+
+button#kl:hover  {
+    background-color:#6ede9c;
+    font-weight:bold;
+}
+
+button#pahang:hover  {
+    background-color:#40e7b8;
+    font-weight:bold;
+}
+
+button#nsembilan:hover  {
+    background-color:#44cac7;
+    font-weight:bold;
+}
+
+button#melaka:hover  {
+    background-color:#48add6;
+    font-weight:bold;
+}
+
+button#johor:hover  {
+    background-color:#4f73f4;
+    font-weight:bold;
+}
+
+button#sarawak:hover  {
+    background-color:#7270f5;
+    font-weight:bold;
+}
+
+button#labuan:hover  {
+    background-color:#946cf7;
+    font-weight:bold;
+}
+
+button#sabah:hover  {
+    background-color:#b769f8;
+    font-weight:bold;
+}
+
+button#putrajaya:hover  {
+    background-color:#d965f9;
+    font-weight:bold;
+}

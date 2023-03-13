@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>COVID in Malaysia</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&family=Inter">
+        <script>
+            // function to display the current date
+            function displayDate() {
+                const d = new Date();
+                const formattedDate = d.toLocaleString("en-GB", {
+                    day:"numeric",
+                    month:"short",
+                    year:"numeric",
+                    hour:"numeric",
+                    minute:"2-digit",
+                    second:"2-digit",
+                    hour12:false,
+                    timeZoneName:"short"
+                });
+                document.getElementById("date").innerHTML = formattedDate;
+            }
+        </script>
+    </head>
+    <body onload="displayDate()">
+        <div class="header">
+            <p>
+                <a href="index.php" id="title"><b>COVID in Malaysia</b></a>
+                <img src="Flag_of_Malaysia.svg" height="20px" style="border-radius:5px; padding-right:50px;">
+                <a class="nav" href="about.html">About</a>
+                <a id="date"></a>
+            </p>
+        </div>
+        <div id="about" style="padding-left:2%; padding-right:2%;">
+            <h1>About</h1>
+            <p>
+                <em>COVID in Malaysia</em> 
+                is an application made to track the advancement of COVID-19 in Malaysia. It shows:
+                <ul>
+                    <li>Number of new cases</li>
+                    <li>Number of accumulated cases</li>
+                    <li>Number of new deaths</li>
+                    <li>Number of accumulated deaths</li>
+                </ul>
+                for each state in Malaysia, as well as the country total.
+                <br><br>
+                The data is extracted directly from the 
+                <a href="https://github.com/MoH-Malaysia/covid19-public" target="_blank" style="color:black;">Malaysian Ministry of Health</a>.
+            </p>
+        </div>
+        <div id="tutorial" style="padding-left:2%; padding-right:2%;">
+            <h1>Tutorial</h1>
+            <p>
+                The map represents the number of cases of COVID-19 in Malaysia, 
+                and is coloured according to severity. The state with the highest number of
+                new cases is <em style="color:red; font-style:normal;">red</em>, 
+                the state with the lowest number of new cases is <em style="color:blue; font-style:normal;">blue</em>, 
+                with the rest ranging between green to orange.
+                <br><br>
+                When hovering the cursor over the states, a tooltip will appear,
+                showing the number of new cases for them. 
+                <br>
+                User can click on a state to view its statistics, which will 
+                appear in the panel on the right. Each time a different state is clicked,
+                its numbers will be exchanged for the last.
+                If a state is too small to be easily clicked, for example <em>Putrajaya</em>,
+                there is a selection panel at the bottom of the map where the states can
+                be chosen from an array of buttons.
+                The buttons are coloured-coded according to the state they represent,
+                and change colours when hovered over.
+                <br><br>
+            </p>
+        </div>
+        <div class="footer">
+            <table>
+                <tr>
+                    <td style="width:30%; color:white;"><p>© 2022 to Tan Zi Ching (1181102378)</p></td>
+                    <td></td>
+                    <td style="width:100%; color:white; padding-right:2%;">
+                        <p style="text-align:right;">
+                            Data courtesy of:
+                            <a href="https://github.com/MoH-Malaysia/covid19-public" target="_blank">Ministry of Health (MoH) Malaysia
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" style="margin-top:auto; margin-bottom:auto;">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>                            
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
